@@ -13,9 +13,60 @@ body{
     padding:10px;
     font-size:14px;
     border:none;
+}
+.dropdown{
+	position:relative;
+    display:inline-block;
+}
+.dropdown-content{
+	display: none;
+  	position: absolute;
+ 	background-color: #f1f1f1;
+  	min-width: 160px;
+ 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn2{
+	background-color:#864BB5;
+    color:white;
+    padding:10px;
+    font-size:14px;
+    border:none;
+}
+.dropdown2{
+	position:relative;
+    display:inline-block;
+}
+.dropdown-content2{
+	display: none;
+  	position: absolute;
+ 	background-color: #f1f1f1;
+  	min-width: 160px;
+ 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content2 a:hover {background-color: #ddd;}
+.dropdown2:hover .dropdown-content2 {display: block;}
+.dropdown2:hover .dropbtn2 {background-color: #3e8e41;}
 </style>
 <body>
-	<div class="dropdown">
+<div class="dropdown">
       <button class="dropbtn">Suit</button>
      	<div class="dropdown-content">
         	<ul>
@@ -25,9 +76,10 @@ body{
                 <li>Pentacles</li>
                 <li>Swords</li>
             </ul>
-  		</div> 
-      <button class="dropbtn">Card Number</button>
-     	<div class="dropdown-content">
+  		</div>
+        
+      <button class="dropbtn2">Card Number</button>
+     	<div class="dropdown-content2">
         	<ul>
             	<li>1</li>
                 <li>2</li>
@@ -44,7 +96,7 @@ body{
                 <li>Queen</li>
                 <li>King</li>
             </ul>
-  		</div>
-	</div> 
+  	</div>
+</div> 
 </body>
 </html>
