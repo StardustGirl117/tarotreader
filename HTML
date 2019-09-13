@@ -7,96 +7,146 @@
 body{
 	background-color:#CFF2FE;
 }
-.dropbtn{
+/*These colors are for the buttons*/
+.Suit{
 	background-color:#864BB5;
     color:white;
     padding:10px;
     font-size:14px;
-    border:none;
+    border:solid;
+    width:105px;
 }
-.dropdown{
+.Cards{
+	background-color:#864BB5;
+    color:white;
+    padding:10px;
+    font-size:14px;
+    border:solid;
+    width:150px;
+}
+.SuitButton{
 	position:relative;
     display:inline-block;
 }
-.dropdown-content{
-	display: none;
-  	position: absolute;
+.CardButton{
+	position:relative;
+    display:inline-block;
+}
+/*These colors are for the dropdown menu options*/
+.suitoptions{
+	display: all;
+  	position: relative;
  	background-color: #f1f1f1;
-  	min-width: 160px;
+  	min-width: 75px;
  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 }
-.dropdown-content a {
+.suitoptions a {
   color: black;
-  padding: 12px 16px;
+  padding: 0px 0px;
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.suitoptions a:hover {background-color: #ddd;}
+.SuitButton:hover .suitoptions {display: block;}
+.SuitButton:hover .Suit {background-color: #3e8e41;}
 
-.dropbtn2{
-	background-color:#864BB5;
-    color:white;
-    padding:10px;
-    font-size:14px;
-    border:none;
-}
-.dropdown2{
-	position:relative;
-    display:inline-block;
-}
-.dropdown-content2{
+.minor{
 	display: none;
-  	position: absolute;
+  	position: relative;
  	background-color: #f1f1f1;
-  	min-width: 160px;
+  	min-width: 150px;
  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 }
-.dropdown-content2 a {
+.minor b{
   color: black;
-  padding: 12px 16px;
+  padding: 0px 0px;
   text-decoration: none;
   display: block;
 }
-.dropdown-content2 a:hover {background-color: #ddd;}
-.dropdown2:hover .dropdown-content2 {display: block;}
-.dropdown2:hover .dropbtn2 {background-color: #3e8e41;}
+.minor b:hover {background-color: #ddd;}
+.CardButton:hover .minor {display: block;}
+.CardButton:hover .Cards {background-color: #3e8e41;}
+.major{
+	display: all;
+  	position: relative;
+ 	background-color: #f1f1f1;
+  	min-width: 150px;
+ 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.major b{
+  color: black;
+  padding: 0px 0px;
+  text-decoration: none;
+  display: block;
+}
+.major b:hover {background-color: #ddd;}
+.CardButton:hover .major {display: block;}
+.CardButton:hover .Cards {background-color: #3e8e41;}
+/*The following are to wrap React intp CSS to */
+
 </style>
 <body>
-<div class="dropdown">
-      <button class="dropbtn">Suit</button>
-     	<div class="dropdown-content">
-        	<ul>
-            	<li>Major Arcana</li>
-                <li>Wands</li>
-                <li>Cups</li>
-                <li>Pentacles</li>
-                <li>Swords</li>
-            </ul>
+<div class="SuitButton">
+      <button class="Suit">Suit</button>
+     	<div class="suitoptions">
+        	<select>
+            	<option value="suit1">Major Arcana</option>
+                <option value="suit2">Wands</option>
+                <option value="suit3">Cups</option>
+                <option value="suit4">Pentacles</option>
+                <option value="suit5">Swords</option>
+            </select>
   		</div>
-        
-      <button class="dropbtn2">Card Number</button>
-     	<div class="dropdown-content2">
-        	<ul>
-            	<li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>Page</li>
-                <li>Knight</li>
-                <li>Queen</li>
-                <li>King</li>
-            </ul>
-  	</div>
+ </div>
+ <div class="CardButton">       
+      <button class="Cards">Card Number</button>
+     	<div class="minor">
+        	<select>
+            	<option value="card1">1</option>
+                <option value="card2">2</option>
+                <option value="card3">3</option>
+                <option value="card4">4</option>
+                <option value="card5">5</option>
+                <option value="card6">6</option>
+                <option value="card7">7</option>
+                <option value="card8">8</option>
+                <option value="card9">9</option>
+                <option value="card10">10</option>
+                <option value="Page">Page</option>
+                <option value="Knight">Knight</option>
+                <option value="Queen">Queen</option>
+                <option value="King">King</option>
+            </select>
+  		</div>
+        <div class="major">
+        	<select>
+            	<option value="Fool">0 - The Fool</option>
+            	<option value="Magician">I - The Magician</option>
+                <option value="Priestess">II - High Priestess</option>
+                <option value="Empress">III - The Empress</option>
+                <option value="Emporer">IV - The Emperor</option>
+                <option value="Priest">V - High Priest</option>
+                <option value="Lovers">VI - The Lovers</option>
+                <option value="Chariot">VII - The Chariot</option>
+                <option value="Strength">VIII - Strength</option>
+                <option value="Hermit">IX - The Hermit</option>
+                <option value="Fortune">X - Wheel of Fortune</option>
+                <option value="Justice">XI - Justice</option>
+                <option value="LoneMan">XII - Lone Man</option>
+                <option value="Death">XIII - Death</option>
+                <option value="Guide">XIV - The Guide</option>
+                <option value="Temptation">XV - Temptation</option>
+                <option value="Tower">XVI - The Tower</option>
+                <option value="Star">XVII - The Star</option>
+                <option value="Illusion">XVIII - Illusion</option>
+                <option value="Sun">XIX - The Sun</option>
+                <option value="Karma">XX - Karma</option>
+                <option value="World">XXI - The World</option>
+            </select>
+        </div>
 </div> 
 </body>
 </html>
